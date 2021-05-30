@@ -63,6 +63,8 @@ static const char *termcmd[]        = { "gnome-terminal", NULL };
 static const char *lockcmd[]        = { "i3lock", "-c", "111111", NULL };
 static const char *brightnessup[]   = { "xbacklight", "-inc", "5", "-time", "100", NULL };
 static const char *brightnessdown[] = { "xbacklight", "-dec", "5", "-time", "100", NULL };
+static const char *audiopause[]     = { "/bin/sh", "-c", "echo -n 'p' > /home/anupc/.config/pianobar/ctl", NULL };
+static const char *audionext[]      = { "/bin/sh", "-c", "echo -n 'n' > /home/anupc/.config/pianobar/ctl", NULL };
 
 static Key keys[] = {
 	/* modifier                     key                        function        argument */
@@ -92,6 +94,8 @@ static Key keys[] = {
 	{ ControlMask|Mod1Mask,         XK_l,                      spawn,          {.v = lockcmd} },
 	{ 0,                            XF86XK_MonBrightnessUp,    spawn,          {.v = brightnessup } },
 	{ 0,                            XF86XK_MonBrightnessDown,  spawn,          {.v = brightnessdown } },
+	{ 0,                            XF86XK_AudioPlay,          spawn,          {.v = audiopause } },
+	{ 0,                            XF86XK_AudioNext,          spawn,          {.v = audionext } },
 	TAGKEYS(                        XK_1,                      0)
 	TAGKEYS(                        XK_2,                      1)
 	TAGKEYS(                        XK_3,                      2)
