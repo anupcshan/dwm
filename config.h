@@ -27,6 +27,7 @@ static const char *colors[][3]      = {
 
 static const char *const autostart[] = {
 	"/home/anupc/bin/dwmbar", NULL,
+        "blueman-applet", NULL,
 	"nm-applet", NULL,
 	"pasystray", NULL,
 	NULL /* terminate */
