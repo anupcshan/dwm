@@ -76,8 +76,8 @@ static const char *termcmd[]        = { "gnome-terminal", NULL };
 static const char *lockcmd[]        = { "i3lock", "-c", "111111", NULL };
 static const char *brightnessup[]   = { "xbacklight", "-inc", "5", "-time", "100", NULL };
 static const char *brightnessdown[] = { "xbacklight", "-dec", "5", "-time", "100", NULL };
-static const char *audiopause[]     = { "/bin/sh", "-c", "echo -n 'p' > /home/anupc/.config/pianobar/ctl", NULL };
-static const char *audionext[]      = { "/bin/sh", "-c", "echo -n 'n' > /home/anupc/.config/pianobar/ctl", NULL };
+static const char *audiopause[]     = { "playerctl", "-a", "play-pause", NULL };
+static const char *audionext[]      = { "playerctl", "-a", "next", NULL };
 
 static Key keys[] = {
 	/* modifier                     key                        function        argument */
